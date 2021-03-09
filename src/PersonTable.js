@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import Table from "react-bootstrap/Table";
 
-const PersonTable = ({ list }) => {
-  const [persons, setPersons] = useState([{}]);
+export const PersonTable = () => {
+  const [persons, setPersons] = useState([]);
 
   useEffect(() => {
     fetch("https://randomuser.me/api/?results=20")
@@ -35,6 +35,7 @@ const PersonTable = ({ list }) => {
             person && (
               <tr key={i}>
                 <td>{person.name.first}</td>
+                <td>{person.gender}</td>
               </tr>
             )
         )}
@@ -42,5 +43,3 @@ const PersonTable = ({ list }) => {
     </Table>
   );
 };
-
-export default PersonTable;

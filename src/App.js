@@ -3,7 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Greeting from "./Greeting";
-import PersonList from "./PersonTable";
+import { PersonTable } from "./PersonTable";
 import Button from "react-bootstrap/Button";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           Learn React
         </a>
 
-        <PersonList list={["Abdul Fatah", "Khalid", "Farhan"]} />
+        <PersonTable />
         <Button>Simple Button</Button>
       </header>
     </div>
